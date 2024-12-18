@@ -23,6 +23,11 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Payment()
+    {
+        return View();
+    }
+
     public IActionResult Invoice()
     {
         return View();
