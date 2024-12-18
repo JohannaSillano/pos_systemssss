@@ -1,31 +1,22 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using pos_system.Models;
 
-namespace pos_system.Controllers;
-
-public class HomeController : Controller
+namespace pos_system.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
-    }
+        public IActionResult Index()
+        {
+            // Sample Product List
+            List<Product> products = new List<Product>
+            {
+                new Product { Id = 1, Name = "Apple", Amount = 100 },
+                new Product { Id = 2, Name = "Banana", Amount = 50 },
+                new Product { Id = 3, Name = "Orange", Amount = 80 }
+            };
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            ViewBag.Products = products;
+            return View();
+        }
     }
 }

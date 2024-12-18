@@ -1,8 +1,64 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "POS System";
+    var products = ViewBag.Products as List<Product>;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>this is a paragraph.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="pos-container">
+        <!-- Search Box -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search product..." />
+        </div>
+
+        <!-- Product List -->
+        <table class="product-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Amount</th>
+                    <th>Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in products)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Amount.ToString("C")</td>
+                        <td>
+                            <button class="select-btn">Select</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- POS Section -->
+        <div class="pos-section">
+            <h2>POS</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Selected products will appear here dynamically -->
+                </tbody>
+            </table>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>
