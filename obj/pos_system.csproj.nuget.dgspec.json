@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj": {}
+    "c:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj": {
+    "c:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj",
+        "projectUniqueName": "c:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj",
         "projectName": "pos_system",
-        "projectPath": "C:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj",
+        "projectPath": "c:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\pos_system.csproj",
         "packagesPath": "C:\\Users\\JOHANNA MAE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\obj\\",
+        "outputPath": "c:\\Users\\JOHANNA MAE\\Downloads\\pos_system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JOHANNA MAE\\AppData\\Roaming\\NuGet\\NuGet.Config",
